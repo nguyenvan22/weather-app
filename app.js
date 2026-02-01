@@ -5,7 +5,7 @@
  *
  */
 
-const OPEN_WEATHER_API_KEY = "https://dataservice.accuweather.com";
+const OPEN_WEATHER_API_KEY = "2f176e7e7472efed8147476190c6a1c6";
 
 const els = {
   form: document.getElementById("searchForm"),
