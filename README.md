@@ -3,7 +3,7 @@
 A clean weather app built with **HTML/CSS/JavaScript** using the **OpenWeather API**.
 
 ## 🌐 Live Demo
-👉 https://vannguyen.github.io/weather-app/
+👉 https://nguyenvan22.github.io/weather-app/
 
 ## Features
 - Search weather by city
