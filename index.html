@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather App</title>
+  <meta name="description" content="A friendly weather app with search, geolocation, and a clean UI." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <main class="app" aria-live="polite">
+    <header class="top">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">☀️</div>
+        <div>
+          <h1>Weather App</h1>
+          <p class="sub">Quick forecast, simple and clean.</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <form id="searchForm" class="search" autocomplete="off">
+          <label class="sr-only" for="cityInput">City</label>
+          <input id="cityInput" type="text" placeholder="Search a city (e.g., New York)" />
+          <button type="submit" class="btn primary">Search</button>
+        </form>
+
+        <div class="row">
+          <button id="geoBtn" class="btn">Use my location</button>
+          <button id="unitBtn" class="btn" aria-pressed="false" title="Toggle °C / °F">°C</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="status">
+        <div id="toast" class="toast" role="status"></div>
+      </div>
+
+      <div class="current">
+        <div class="left">
+          <h2 id="place">—</h2>
+          <p class="meta">
+            <span id="localTime">—</span> • <span id="condition">—</span>
+          </p>
+
+          <div class="tempRow">
+            <div class="temp">
+              <span id="tempValue">—</span><span id="tempUnit">°C</span>
+            </div>
+
+            <div class="iconWrap" aria-hidden="true">
+              <img id="icon" alt="" />
+            </div>
+          </div>
+
+          <div class="chips">
+            <div class="chip"><span>Feels</span><b id="feels">—</b></div>
+            <div class="chip"><span>Humidity</span><b id="humidity">—</b></div>
+            <div class="chip"><span>Wind</span><b id="wind">—</b></div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="mini">
+            <h3>Today</h3>
+            <p class="miniLine"><span>High</span> <b id="high">—</b></p>
+            <p class="miniLine"><span>Low</span> <b id="low">—</b></p>
+            <p class="miniLine"><span>Clouds</span> <b id="clouds">—</b></p>
+          </div>
+
+          <div class="hint">
+            <p id="friendlyTip">Type a city or use location to get started 🙂</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sep" />
+
+      <section class="forecast">
+        <div class="forecastHead">
+          <h3>Next hours</h3>
+          <p class="muted">3-hour steps</p>
+        </div>
+        <div id="forecastGrid" class="forecastGrid" aria-label="Hourly forecast"></div>
+      </section>
+    </section>
+
+    <footer class="foot">
+      <p>
+        Data by <span class="pill">OpenWeather</span> •
+        <a href="https://openweathermap.org/" target="_blank" rel="noreferrer">openweathermap.org</a>
+      </p>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
