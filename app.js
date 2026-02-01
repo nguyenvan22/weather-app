@@ -5,7 +5,7 @@
  *
  */
 
-const OPEN_WEATHER_API_KEY = "2f176e7e7472efed8147476190c6a1c6";
+const OPEN_WEATHER_API_KEY = "6f61b7a1c43fa01e229e13030d5813f8";
 
 const els = {
   form: document.getElementById("searchForm"),
